@@ -20,9 +20,9 @@ public class Ship : MonoBehaviour {
     {
         if (collision.gameObject.name == "meteorBrown_big1(Clone)") //Se verifica si la nave choca con un asteroide clonado
         {
-            //APK.LoadLevel("Menu");
-            //Destroy(gameObject);
-            //Debug.Log(collision.gameObject.name);
+            GameController.instance.gamOver = true;
+            //Space.LoadLevel("Menu");
+            Destroy(gameObject);
         }
     }
 }
