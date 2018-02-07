@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ship : MonoBehaviour {
-    public float speed = 2f;
+    public float speed = 2f; //Velocidad a la que se movera la nave
     Rigidbody2D rb;
     // Use this for initialization
     void Start() {
@@ -12,12 +12,17 @@ public class Ship : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float movX = Input.acceleration.x;
-        rb.transform.Translate(Vector2.right * speed * movX * Time.deltaTime);
+        float movX = Input.acceleration.x; //variable que instancia el acelerometro del dispositivo
+        rb.transform.Translate(Vector2.right * speed * movX * Time.deltaTime); //El comportamiento de como se trasladara el objeto
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) //Aqui persive si la nave tiene alguna colision con algun otro objeto
     {
-        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "meteorBrown_big1(Clone)") //Se verifica si la nave choca con un asteroide clonado
+        {
+            //APK.LoadLevel("Menu");
+            //Destroy(gameObject);
+            //Debug.Log(collision.gameObject.name);
+        }
     }
 }

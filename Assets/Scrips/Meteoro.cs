@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Meteoro : MonoBehaviour {
-    public GameObject asteroide;
-    public float spawnTime = 4f;
+    public GameObject asteroide; //El objeto que se va a instanciar
+    public float spawnTime = 4f; //Tiempo que va a tardar oara crear otro objeto
     public float elapsedTime = 0;
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class Meteoro : MonoBehaviour {
             }
             else
             {
-                float random = Random.Range(-3f, 3f);
+                float random = Random.Range(-2.8f, 2.8f); //Rango que debe aparecer en la pantalla
                 Instantiate(asteroide, new Vector3(random, 5, 0), Quaternion.identity);
                 elapsedTime = 0;
             }
