@@ -5,10 +5,11 @@ using UnityEngine;
 public class Ship : MonoBehaviour {
     public float speed = 2f; //Velocidad a la que se movera la nave
     Rigidbody2D rb;
+
     // Use this for initialization
     void Start() {
         rb = GetComponent<Rigidbody2D>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,7 +22,7 @@ public class Ship : MonoBehaviour {
         if (collision.gameObject.name == "meteorBrown_big1(Clone)") //Se verifica si la nave choca con un asteroide clonado
         {
             GameController.instance.gamOver = true;
-            //Space.LoadLevel("Menu");
+            Application.LoadLevel("Menu");
             Destroy(gameObject);
         }
     }
