@@ -23,7 +23,7 @@ public class Ship : MonoBehaviour {
         {
             GameController.instance.gamOver = true;
             Application.LoadLevel("Menu");
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
