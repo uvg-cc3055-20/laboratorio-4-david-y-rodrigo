@@ -20,7 +20,7 @@ public class Meteoro : MonoBehaviour {
             }
             else
             {
-                float random = Random.Range(-2.8f, 2.8f); //Rango que debe aparecer en la pantalla
+                float random = Random.Range(-2.5f, 2.5f); //Rango que debe aparecer en la pantalla
                 Instantiate(asteroide, new Vector3(random, 5, 0), Quaternion.identity);
                 elapsedTime = 0;
             }

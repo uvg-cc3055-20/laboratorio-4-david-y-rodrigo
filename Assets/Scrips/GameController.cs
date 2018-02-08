@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameController : MonoBehaviour {
 
     public bool gamOver = false;
-    public int score = 0;
+	public float currentHighscore = 0;
+	public float time;
     public static GameController instance;
-
+	public Text timeLabel;
 
     // Use this for initialization
     void Start () {
@@ -15,6 +18,23 @@ public class GameController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if(gamOver == false)
+		{
+			time += Time.deltaTime;
+			timeLabel.text = time.ToString ();
+		}
     }
+
+	public void endGame()//funcion que declara cual es el highscore del jugador
+	{
+		gamOver = false;
+		currentHighscore = PlayerPrefs.GetFloat("Highscore");	
+		if(currentHighscore < time)
+		{
+			currentHighscore = time;
+			PlayerPrefs.SetFloat("Highscore", currentHighscore);
+		}
+	}
 }
