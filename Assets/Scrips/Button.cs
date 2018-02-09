@@ -12,7 +12,7 @@ public class Button : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		Highscore.text = PlayerPrefs.GetFloat("Highscore").ToString();
+		Highscore.text = PlayerPrefs.GetFloat ("Highscore").ToString ("n0");
 	}
 	
 	// Update is called once per frame

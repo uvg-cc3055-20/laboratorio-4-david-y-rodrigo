@@ -20,10 +20,12 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(gamOver == false)
+		if (gamOver == false) {
+			time += Time.deltaTime * 1000;
+			timeLabel.text = time.ToString ("n0");
+		} else 
 		{
-			time += Time.deltaTime;
-			timeLabel.text = time.ToString ();
+			endGame();
 		}
     }
 

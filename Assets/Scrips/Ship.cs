@@ -17,12 +17,12 @@ public class Ship : MonoBehaviour {
         rb.transform.Translate(Vector2.right * speed * movX * Time.deltaTime); //El comportamiento de como se trasladara el objeto
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) //Aqui persive si la nave tiene alguna colision con algun otro objeto
+    private void OnCollisionEnter2D(Collision2D collision) //Aqui persive si la nave tiene alguna colision con algun otro objeto 
     {
         if (collision.gameObject.name == "meteorBrown_big1(Clone)") //Se verifica si la nave choca con un asteroide clonado
         {
             GameController.instance.gamOver = true;
-            Application.LoadLevel("Menu");
+            Application.LoadLevel("Menu"); //Carga la pantalla de inicio al perder
             //Destroy(gameObject);
         }
     }
