@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Autores Rodrigo Samayoa y David Soto
 
 public class Meteoro : MonoBehaviour {
     public GameObject asteroide; //El objeto que se va a instanciar
-    public float spawnTime = 4f; //Tiempo que va a tardar oara crear otro objeto
+    public float spawnTime = 2f; //Tiempo que va a tardar oara crear otro objeto
     public float elapsedTime = 0;
 	// Use this for initialization
 	void Start () {

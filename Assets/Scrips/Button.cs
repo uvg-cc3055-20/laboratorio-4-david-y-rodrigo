@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+//Autores Rodrigo Samayoa y David Soto
 
 public class Button : MonoBehaviour {
 

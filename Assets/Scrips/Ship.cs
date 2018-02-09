@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Autores Rodrigo Samayoa y David Soto
 
 public class Ship : MonoBehaviour {
     public float speed = 2f; //Velocidad a la que se movera la nave

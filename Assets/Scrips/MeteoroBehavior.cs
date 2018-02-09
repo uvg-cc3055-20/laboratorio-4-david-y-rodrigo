@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Autores Rodrigo Samayoa y David Soto
 
 public class MeteoroBehavior : MonoBehaviour {
-    public float speed = 2f;
+    public float speed = 4f;
     Rigidbody2D rb;
     // Use this for initialization
     void Start()

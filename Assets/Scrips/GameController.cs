@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//Autores Rodrigo Samayoa y David Soto
 
 public class GameController : MonoBehaviour {
 
